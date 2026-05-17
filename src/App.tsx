@@ -1,11 +1,16 @@
 import './App.css'
 import Footer from './sections/Footer/Footer'
+import Header from './sections/Header/Header'
+import Hero from './sections/Hero/Hero'
 
 function App() {
 
   return (
     <>
-       <main></main>
+       <Header/>
+       <main>
+        <Hero/>
+       </main>
        <Footer/>
     </>
   )
