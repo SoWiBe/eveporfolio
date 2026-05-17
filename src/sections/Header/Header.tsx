@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Header.module.css'
+import logo from '../../assets/icons/logo-mark.svg'
 
 const NAV_LINKS = [
     { href: '#about', label: 'About'},
@@ -24,7 +25,7 @@ const Header = () => {
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.inner}>
                 <a href="#" className={styles.logo}>
-                    evewibe<span>.</span>dev
+                    <img src={logo} alt="evewibe" width="32" height="32" />
                 </a>
 
                 <nav className={styles.nav} aria-label='Main Navigation'>
