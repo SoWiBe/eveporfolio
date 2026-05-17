@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Header.module.css'
 
-
 const NAV_LINKS = [
     { href: '#about', label: 'About'},
     { href: '#project', label: 'Projects'},
