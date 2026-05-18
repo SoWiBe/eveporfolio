@@ -1,8 +1,11 @@
 import styles from './Hero.module.css'
-import me from '../../assets/me.png'
+import me from '../../assets/icons/alex.jpg'
+import { useInView } from '../../hooks/useInView'
 
-const Hero = () => (
-    <section className={styles.hero}>
+const Hero = () => {
+  const { ref, inView } = useInView<HTMLElement>()
+  return (
+    <section ref={ref} className={`${styles.hero} reveal${inView ? ' visible' : ''}`}>
         <div className={styles.inner}>
             <div className={styles.content}>
                 <span className={styles.greeting}>Hi, I am</span>
@@ -26,6 +29,7 @@ const Hero = () => (
             </div>
         </div>
     </section>
-)
+  )
+}
 
 export default Hero;

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './Header.module.css'
-import logo from '../../assets/icons/logo-mark.svg'
+import logoMark from '../../assets/icons/logo-mark.svg'
+import logoFull from '../../assets/icons/logo-full.svg'
 
 const NAV_LINKS = [
     { href: '#about', label: 'About'},
@@ -24,8 +25,9 @@ const Header = () => {
     return (
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.inner}>
-                <a href="#" className={styles.logo}>
-                    <img src={logo} alt="evewibe" width="32" height="32" />
+                <a href="#" className={styles.logo} aria-label="evewibe">
+                    <img src={logoMark} className={styles.logoMark} alt="" aria-hidden="true" />
+                    <img src={logoFull} className={styles.logoFull} alt="" aria-hidden="true" />
                 </a>
 
                 <nav className={styles.nav} aria-label='Main Navigation'>
