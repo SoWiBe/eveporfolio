@@ -29,15 +29,49 @@
 
 /* Logo */
 .logo {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--color-text);
+  position: relative;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.3px;
+  width: 32px;
+  height: 36px;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo span {
-  color: var(--color-accent);
+.logo:hover {
+  width: 175px;
+}
+
+.logoMark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 32px;
+  width: 32px;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover .logoMark {
+  opacity: 0;
+}
+
+.logoFull {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: auto;
+  opacity: 0;
+  transition: opacity 0.35s ease 0.1s;
+}
+
+.logo:hover .logoFull {
+  opacity: 1;
 }
 
 /* Desktop nav */

@@ -88,18 +88,17 @@
 /* Right — photo */
 .photoWrap {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 100vh;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo {
-  height: 90%;
-  max-height: 800px;
-  width: auto;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: top;
+  object-position: center 10%;
+  border-radius: var(--radius-lg);
   display: block;
 }
 
@@ -113,14 +112,11 @@
   }
 
   .photoWrap {
-    height: 60vw;
-    justify-content: center;
     order: -1;
   }
 
   .photo {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    max-width: 280px;
+    aspect-ratio: 4 / 5;
   }
 }
